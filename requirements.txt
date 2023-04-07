@@ -1,0 +1,11 @@
+flask
+flask-smorest
+python-dotenv
+sqlalchemy
+flask-sqlalchemy
+jsonpickle
+requests
+Flask-SocketIO==5.3.2
+flask-jwt-extended
+passlib
+flask-migrate
