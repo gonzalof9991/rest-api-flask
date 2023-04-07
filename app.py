@@ -11,6 +11,8 @@ from resources.tag import blp as TagBlueprint
 from resources.user import blp as UserBlueprint
 # Importamos Flask Migrate
 from flask_migrate import Migrate
+# Importamos env
+from dotenv import load_dotenv
 # Importamos la bd
 from db import db
 # Importamos los modelos
@@ -21,6 +23,8 @@ from blocklist import BLOCKLIST
 
 def create_app(db_url=None):
     app = Flask(__name__)
+    # Cargar .env
+    load_dotenv()
     # Configuración de Flask
     app.config["API_TITLE"] = "Stores REST API"
     app.config["API_VERSION"] = "v1"
@@ -123,8 +127,3 @@ def create_app(db_url=None):
     return app
 
 
-"""
-1.- Activar virtualenv
-2.- .\.venv\Scripts\Activate.ps1
-3.- flask run   q
-"""
